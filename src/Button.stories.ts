@@ -16,3 +16,18 @@ export const Primary: Story = {
         onClick: () => alert('Clicked!'),
     },
 };
+export const Disabled: Story = {
+    args: {
+        label: 'Disabled Button',
+        onClick: async () => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(
+                        alert('Clicked!')
+                    );
+                }, 5000);
+            });
+        },
+        disabled: false,
+    },
+};
